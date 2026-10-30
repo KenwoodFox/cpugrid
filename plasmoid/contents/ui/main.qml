@@ -88,9 +88,9 @@ PlasmoidItem {
     }
 
     function heat(pct) {
-        // 0% white -> 100% red, curved so light loads stay pale.
+        // 0% transparent -> 100% red, curved so light loads stay faint.
         const t = Math.pow(Math.max(0, Math.min(1, pct / 100)), 0.8);
-        return Qt.rgba(1, 1 - t, 1 - t, 1);
+        return Qt.rgba(1, 0, 0, t);
     }
 
     Timer {
